@@ -348,7 +348,7 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                                class="fas fa-download fa-sm text-white-50"></i>Request Supply Edit</a>
                     </div>
 
                     <!-- Content Row -->
@@ -361,8 +361,8 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                                Predicted Demand (Monthly)</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">7000</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -379,8 +379,8 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Earnings (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                                Supply (Monthly)</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">5040</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -396,11 +396,11 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Company Performance
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Recommended Supply (Monthly)
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">90%</div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">6943</div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="progress progress-sm mr-2">
@@ -426,8 +426,8 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Stock-outs</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
+                                                Current Supply</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">533</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -441,79 +441,66 @@
                     <!-- Content Row -->
 
                     <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Service Level</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Stock Outs Incidence
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Demand Met
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Others
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<!-- DataTales Example -->
+<div class="card shadow mb-8">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Supplier</th>
+                        <th>Current Stock</th>
+                        <th>Daily Sales</th>
+                        <th>Recommended Target Supply Stock</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cabbages</td>
+                        <td>Quan Fa Organic Farm</td>
+                        <td>533</td>
+                        <td>61</td>
+                        <td>7000</td>
+                        <td><button class="btn btn-info">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td>Eggplants</td>
+                        <td>Kok Fah Farm</td>
+                        <td>4563</td>
+                        <td>20</td>
+                        <td>6465</td>
+                        <td><button class="btn btn-info">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td>Avocados</td>
+                        <td>Quan Fa Organic Farm</td>
+                        <td>2333</td>
+                        <td>21</td>
+                        <td>8609</td>
+                        <td><button class="btn btn-info">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td>Bananas</td>
+                        <td>Senior Javascript Developer</td>
+                        <td>433</td>
+                        <td>22</td>
+                        <td>2012</td>
+                        <td><button class="btn btn-info">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td>Papayas</td>
+                        <td>Hup Heng Fresh Produce</td>
+                        <td>1343</td>
+                        <td>33</td>
+                        <td>2008</td>
+                        <td><button class="btn btn-info">Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
                     </div>
 
                     <!-- Content Row -->
